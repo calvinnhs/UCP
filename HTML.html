@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>  
+  <title>Dashboard</title>
+  <style>
+    /* CSS styling for the dashboard */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .navbar-text {
+      font-size: 20px;
+    }
+
+    .navlinks {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navlinks li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .navlinks li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .greeting {
+      font-size: 24px;
+    }
+
+    .datetime {
+      font-size: 18px;
+    }
+
+    .carousel {
+      /* CSS styling for the carousel */
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 20px;
+    }
+
+    .card {
+      width: 300px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin-right: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    // JavaScript code for updating the greeting, date, and time
+    function updateDateTime() {
+      var today = new Date();
+      var hour = today.getHours();
+      var greeting = "";
+
+      if (hour >= 0 && hour < 12) {
+        greeting = "Good morning";
+      } else if (hour >= 12 && hour < 18) {
+        greeting = "Good afternoon";
+      } else {
+        greeting = "Good evening";
+      }
+
+      document.getElementById("greeting").innerHTML = greeting;
+      document.getElementById("datetime").innerHTML = today.toLocaleString();
+    }
+
+    // Call the updateDateTime function when the page loads
+    window.onload = updateDateTime;
+  </script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="navbar">
+      <span class="navbar-text">CALVINS RESTORANS</span>
+      <ul class="navlinks">
+        <li><a href="#">HELP</a></li>
+        <li><a href="#">CONTACT</a></li>
+        <li><a href="#">HOME</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="header">
+      <div>
+        <span id="greeting" class="greeting"></span>
+      </div>
+      <div>
+        <span id="datetime" class="datetime"></span>
+      </div>
+    </div>
+  </header>
+
+ <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+     <button type="button" data-bs-target="#demo" data-bs-slide
+    to="0" class="active"></button>
+     <button type="button" data-bs-target="#demo" data-bs-slideto="1"></button>
+     <button type="button" data-bs-target="#demo" data-bs-slideto="2"></button>
+    </div>
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+     <div class="carousel-item active">
+     <img src="gambar3.jpeg" alt="Los Angeles" class="d-block w-100">
+     </div>
+     <div class="carousel-item">
+     <img src="gambar4.jpg" alt="Chicago" class="d-block w-100">
+     </div>
+     <div class="carousel-item">
+     <img src="gambar6.jpg" alt="New York" class="d-block w-100">
+     </div>
+    </div>
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bstarget="#demo" data-bs-slide="prev">
+     <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bstarget="#demo" data-bs-slide="next">
+     <span class="carousel-control-next-icon"></span>
+    </button>
+    </div>
+    
+
+  <!-- Cards -->
+  <div class="card-container">
+    <div class="card">
+      <img src="burger.png" alt="Card 1">
+      <h3>BURGER</h3>
+      <p>Burger salah satu makanan asal Amerika Serikat yang populer di dunia. Ternyata ada perjalanan panjang burger sejak dipernalkan hingga kini menjadi makanan internasional.
+        Burger merupakan hidangan yang terbuat dari satu tangkup roti diisi sepotong patty daging dan diberi saus. Burger begitu populer dan memiliki banyak penggemar di seluruh dunia.
+        </p>
+    </div>
+    <div class="card">
+      <img src="ayam.jpeg" alt="Card 2">
+      <h3>CHICKEN</h3>
+      <p>Chicken teriyaki selalu jadi menu favorit di restoran Jepang. Meski sederhana ayam yang manis gurih ini bikin ketagihan jika apalagi dimakan dengan nasi hangat.
+        Sesuai namanya teriyaki artinya daging panggang, sajian ini merupakan daging ayam yang dipanggang. Sebelum dipanggang daging ayam direndam dalam bumbu shoyu yang sederhana.
+       </p>
+    </div>
+    <div class="card">
+      <img src="kentang.jpeg" alt="Card 3">
+      <h3>FRENCH FRIES</h3>
+      <p>Kentang goreng crispy merupakan camilan yang umum dijual di restoran atau rumah makan. Selain cocok sebagai teman nongkrong, camilan kentang goreng cukup dapat membuat kenyang. Sebenarnya Sedulur tidak perlu memaksakan ke restoran untuk mencicipi kentang goreng, Sedulur bisa membuatnya sendiri di rumah, lho!</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <p>&copy; 2023 Pengembangan Desain Web - Create By.Calvinnhs - .</p>
+    </div>
+  </footer>
+</body>
+</html>
